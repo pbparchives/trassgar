@@ -1,0 +1,38 @@
+Armor (Conjuration)
+
+Range: Touch
+Components: V, S, M
+Duration: Special
+Casting Time: 1 round
+Area of Effect: 1 creature
+Saving Throw: None
+
+	By means of this spell, the wizard creates
+a magical field of force that serves as if it
+were ring mail armor (AC 6). The spell has
+no effect on a person already armored or a
+creature with Armor Class 6 or better. It is
+not cumulative with the shield spell, but it is
+cumulative with Dexterity and, in the case
+of fighter/mages, with the shield bonus.
+The armor spell does not hinder movement,
+adds no weight or encumbrance, nor does it
+prevent spellcasting. It lasts until successful-
+ly dispelled or until the wearer sustains
+cumulative damage totaling greater than 8
+points + 1 per level of the caster. (It is
+important to note that the armor does not
+absorb this damage. The armor merely
+grants an AC of 6; the wearer still suffers
+full damage from any successful attacks.)
+Thus, the wearer might suffer 8 points from
+an attack, then several minutes later sustain
+an additional 1 point of damage. Unless the
+spell were cast by a wizard of 2nd level or
+higher, it would be dispelled at this time.
+Until it is dispelled, the armor spell grants
+the wearer full benefits of the Armor Class
+gained.
+	The material component is a piece of fine-
+ly cured leather that has been blessed by a
+cleric.

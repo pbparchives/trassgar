@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+  <TITLE>The Trassgar Saga Main Menu</TITLE>
+<SCRIPT>
+<!-- Activate Cloaking Device
+
+var number=4;
+random.m=714025;
+random.a=4096;
+random.c=150889;
+random.seed = (new Date()).getTime() % random.m;
+
+// Function to set die and clear result window.
+function Init(num) {
+   number = num;
+   document.randomizer.result.value = "";
+}
+
+// Portable random number generator.
+function random() {
+   random.seed = (random.seed*random.a + random.c) % random.m;
+   return random.seed / random.m;
+}
+
+// Die rolling function.
+function rollDie(number) {
+   document.randomizer.result.value = 1+Math.floor(random()*number);
+   document.randomizer.result.value = " " + document.randomizer.result.value;
+}
+
+// Function to display info.
+function About() {
+   alert("\nDie Roller\n\nClick on the number of sides of the\n die you wish to roll, then click Roll.\n\n");
+}
+
+// Deactivate Cloaking -->
+</SCRIPT>
+
+<STYLE TYPE="text/css">
+  A {text-decoration:none;}
+  A:hover {color:#FF9933;}
+  td.ss { font-family: arial; font-size: x-small;}
+  span.abbs { color: yellow;}
+  table { color: white;}
+  body { background-color: #444444; color: #ffffff; font-size:small}
+</style>
+
+</HEAD>
+
+<body link="#8fbc8f" alink="yellow" vlink="#dfbcdf">
+
+<center>
+<strong>== The Trassgar Saga ==</strong>
+<hr>
+
+<strong>== Source Pages ==</strong>
+<p>
+<a href="main.html" target="main"
+  onMouseOver="status='Back to the Main Page'; return true;"
+  onMouseOut="status='';">Main</A>
+
+<hr width="25%">
+
+<a href="original.html" target="main"
+  onMouseOver="status='Summary of original adventures'; return true;"
+  onMouseOut="status='';">Original Adventures</a>
+<br>
+<a href="new.html" target="main"
+  onMouseOver="status='List of recent player/DM moves'; return true;"
+  onMouseOut="status='';">New Adventures</A>
+<br>
+<a href="toc.html" target="contents"
+  onMouseOver="status='Table of contents of the saga'; return true;"
+  onMouseOut="status='';">Storyline</A>
+<br>
+<a href="characters.html" target="contents"
+  onMouseOver="status='Individual Character Story threads'; return true;"
+  onMouseOut="status='';">Character Threads</A>
+
+<hr width="25%">
+
+<a href="index_players.html" target="_top"
+  onMouseOver="status='Player information'; return true;"
+  onMouseOut="status='';">Players</A> --
+<a href="rules.html" target="main"
+  onMouseOver="status='AD&D Rules sample'; return true;"
+  onMouseOut="sttaus='';">Rules</a>
+<br>
+<a href="http://clubs.yahoo.com/clubs/theforestsedgeforum"
+  target="_top"
+  onMouseOver="status='The New Forests Edge Forum'; return true;"
+  onMouseOut="sttaus='';">Forest's Edge Forum</a><br>
+(<font size="-1"><a href="geobook.html" target="main"
+  onMouseOver="status='The Old Forests Edge Forum'; return true;"
+  onMouseOut="sttaus='';">original FEF</a></font>)
+
+<hr width="25%">
+
+<a href="world.html" target="main"
+  onMouseOver="status='Trassgar Map'; return true;"
+  onMouseOut="status='';">Trassgar Map</a>
+<br>
+<a href="cities.html" target="main"
+  onMouseOver="status='Cities of Trassgar'; return true;"
+  onMouseOut="status='';">Cities of Trassgar</a>
+<br>
+<a href="graphics/index.html" target="main"
+  onMouseOver="status='Trassgar graphics'; return true;"
+  onMouseOut="status='';">Site Graphics</a>
+<br>
+<a href="trassgar_houses.html" target="main"
+  onMouseOver="status='Ruling Houses of Trassgar'; return true;"
+  onMouseOut="status='';">Ruling Houses</a>
+<br>
+<a href="trassgar_faiths.html" target="main"
+  onMouseOver="status='Philosophies of Trassgar'; return true;"
+  onMouseOut="status='';">Faiths/Philosophies</a>
+
+<hr>
+
+<strong>== Die rolls ==</strong>
+
+<CENTER>
+<FORM NAME="randomizer">
+<INPUT TYPE="text" NAME="result" VALUE="Pick a die" SIZE="10">
+<INPUT TYPE="button" VALUE=" Roll " onClick="rollDie(number)">
+<BR>
+<TABLE BORDER=2 width="70">
+<tr>
+  <TD width="33%" align="center">
+    <INPUT TYPE=radio NAME="seed"
+      checked onClick="if (this.checked) {Init(4)}"><br>d4
+  </td>
+  <TD align="center">
+    <INPUT TYPE=radio NAME="seed" onClick="if (this.checked) {Init(6)}"><br>d6
+  </td>
+  <TD align="center">
+    <INPUT TYPE=radio NAME="seed" onClick="if (this.checked) {Init(8)}"><br>d8
+  </td>
+  <TD align="center">
+    <INPUT TYPE=radio NAME="seed" onClick="if (this.checked) {Init(10)}"><br>d10
+  </td>
+</tr>
+<tr>
+  <TD align="center">
+    <INPUT TYPE=radio NAME="seed" onClick="if (this.checked) {Init(12)}"><br>d12
+  </td>
+  <TD align="center">
+    <INPUT TYPE=radio NAME="seed" onClick="if (this.checked) {Init(20)}"><br>d20
+  </td>
+  <TD colspan="2" align="center">
+    <INPUT TYPE=radio NAME="seed" onClick="if (this.checked) {Init(100)}"> d100
+  </td>
+</tr>
+</TABLE>
+<INPUT TYPE=reset VALUE=" Reset ">
+<INPUT TYPE=button VALUE="About" onClick="About()">
+</FORM>
+
+<!--
+<p align="center"><img src="graphics/aD20-red.gif"></p>
+-->
+
+</CENTER>
+</BODY>
+</HTML>

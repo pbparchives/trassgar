@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<TITLE>ADD Entry Page</TITLE>
+</HEAD>
+<BODY BGCOLOR="#C0C0C0" TEXT="#000000">
+<!--     ***************  addbook.html Guidelines ****************   -->
+<!--     As with the geobook.html file, you can customize the look   -->
+<!--     of this page as much as you wish, provided you follow       -->
+<!--     these rules:                                                -->
+<!--     1) Do not modify any fields in the FORM clause. All of the  -->
+<!--        field names and values are very specific. Any changes    -->
+<!--        could result in unknown results.                         -->
+<!--     2) Do not edit the *FINAL* tag line. The add entry program  -->
+<!--        will not work without this tag.                          -->
+<!--     You can always generate a new addbook.html file by going    -->
+<!--     to guest_book.html and configuring a new addbook.html file. -->
+<!--     *********************************************************   -->
+
+<center><!--#geoguide--></center>
+<p>
+Welcome to the Forest's Edge Forum Postings Page, a message board of sorts for discussions about the Trassgar Saga. Type your
+comments in the fields below for addition to the
+<a href="http://www.geocities.com/TimesSquare/Labyrinth/7890/geobook.html" target="main">Forest's Edge Forum</a>.
+
+<p>
+<FORM METHOD=POST ACTION=/cgi-bin/geoplus_apps/ans_entry>
+<INPUT type=hidden name="final" value="<!-- *FINAL* -->">
+<INPUT type=hidden name="state" value="1">
+<table>
+<tr><td>Player name:</td><td><INPUT type=text name="field1">
+<input type=hidden name="field1_name" value="Player name"></td></tr>
+
+<tr><td>e-mail:</td><td><INPUT type=text name="field3">
+<input type=hidden name="field3_name" value="e-mail"></td></tr>
+
+<tr><td>Character name:</td><td><INPUT type=text name="field4">
+<input type=hidden name="field4_name" value="Character name"></td></tr>
+
+</table>
+<INPUT type=hidden name="style" value="1">
+<br>Your Comments:<br>
+<textarea name=comments wrap=physical cols=50 rows=6></textarea><p>
+<input type=submit value="Post your message">
+<input type=reset value="Clear all fields">
+</body></html>

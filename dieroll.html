@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//Dtd HTML 4.0 Transitional//EN"
+"http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+   <title>Ye Official Trassgar Dice roller</title>
+   <style type="text/css">
+      body { background: #444444; color: #ffffff }
+      span.courier { font-family: courier; font-size: smaller }
+   </style>
+   <script>
+      <!-- Activate Cloaking Device
+      var number=4;
+      random.m=714025;
+      random.a=4096;
+      random.c=150889;
+      random.seed = (new Date()).getTime() % random.m;
+
+      // Function to set die and clear result window.
+      function Init(num) {
+         number = num;
+         document.randomizer.result.value = "";
+      }
+
+      // Portable random number generator.
+      function random() {
+         random.seed = (random.seed*random.a + random.c) % random.m;
+         return random.seed / random.m;
+      }
+
+      // Die rolling function.
+      function rollDie(number) {
+         document.randomizer.result.value = 1+Math.floor(random()*number);
+         document.randomizer.result.value = " " + document.randomizer.result.value;
+      }
+
+      // Function to display info.
+      function About() {
+         alert("\nYe Official Trassgar Dice Roller:\n\nClick on the number of sides of the\n die you wish to roll, then click Roll.\n\n");
+      }
+
+      // Deactivate Cloaking -->
+   </script>
+
+</head>
+<body>
+   <span class="courier">Ye Official Trassgar<br />Dice Roller</span>
+   <img src="graphics/aD20-red.gif" alt="d20" />
+   <br />
+   <form name="randomizer">
+      <input type="text" name="result" value="Pick a die" SIZE="10" />
+      <input type="button" value=" Roll " onClick="rollDie(number)" />
+      <br />
+      <table BORDER=2 width="70">
+         <tr>
+            <td width="33%" align="center">
+               <input type="radio" name="seed" checked
+               onClick="if (this.checked) {Init(4)}"><br />d4
+            </td>
+            <td align="center">
+               <input type="radio" name="seed"
+               onClick="if (this.checked) {Init(6)}"><br />d6
+            </td>
+            <td align="center">
+               <input type="radio" name="seed"
+               onClick="if (this.checked) {Init(8)}"><br />d8
+            </td>
+            <td align="center">
+               <input type="radio" name="seed"
+               onClick="if (this.checked) {Init(10)}"><br />d10
+            </td>
+         </tr>
+         <tr>
+            <td align="center">
+               <input type="radio" name="seed"
+               onClick="if (this.checked) {Init(12)}"><br />d12
+            </td>
+            <td align="center">
+               <input type="radio" name="seed"
+               onClick="if (this.checked) {Init(20)}"><br />d20
+            </td>
+            <td colspan="2" align="center">
+               <input type="radio" name="seed"
+               onClick="if (this.checked) {Init(100)}"><br />d100
+            </td>
+         </tr>
+      </table>
+      <input type=reset value=" Reset " />
+      <input type=button value="About" onClick="About()" />
+   </form>
+</body>
+</html>

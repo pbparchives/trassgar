@@ -1,0 +1,645 @@
+<HTML>
+<HEAD>
+<TITLE>Drop down menu worksheet</TITLE>
+<script language="JavaScript">
+<!--
+  window.onError = 0;
+  NS4   = (document.layers) ? 1 : 0;
+  IE4   = (document.all) ? 1 : 0;
+  ver4  = (NS4 || IE4) ? 1 : 0;   
+  NS3   = (!NS4 && !IE4 && document.images) ? 1 : 0;
+  IE3   = (!NS4 && !IE4 && !NS3 && (navigator.userAgent.indexOf("MSIE") != -1)) ? 1 : 0;
+  NS2   = (!NS4 && !IE4 && !NS3 && !IE3 && !document.images) ? 1 : 0;
+  isMac = (navigator.appVersion.indexOf("Mac") != -1) ? 1 : 0;
+  isGo  = (NS4 || (IE4 && !isMac)) ? 1 : 0;
+
+  doc   = (NS4) ? "document" : "document.all";
+  sty   = (NS4) ? "" : ".style";
+
+  menu0 = (NS4) ? "document[\"menu0\"]" : "document.all[\"menu0\"].style"; 
+  menu1 = (NS4) ? "document[\"menu0\"].document[\"menu1\"]" : "document.all[\"menu1\"].style";
+  menu2 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"]" : "document.all[\"menu2\"].style";
+  menu3 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"].document[\"menu3\"]" : "document.all[\"menu3\"].style";
+  menu4 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"].document[\"menu3\"].document[\"menu4\"]" : "document.all[\"menu4\"].style";
+  menu5 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"].document[\"menu3\"].document[\"menu4\"].document[\"menu5\"]" : "document.all[\"menu5\"].style";
+  menu6 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"].document[\"menu3\"].document[\"menu4\"].document[\"menu5\"].document[\"menu6\"]" : "document.all[\"menu6\"].style";
+  menu7 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"].document[\"menu3\"].document[\"menu4\"].document[\"menu5\"].document[\"menu6\"].document[\"menu7\"]" : "document.all[\"menu7\"].style";
+  menu8 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"].document[\"menu3\"].document[\"menu4\"].document[\"menu5\"].document[\"menu6\"].document[\"menu7\"].document[\"menu8\"]" : "document.all[\"menu8\"].style";
+  menu9 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"].document[\"menu3\"].document[\"menu4\"].document[\"menu5\"].document[\"menu6\"].document[\"menu7\"].document[\"menu8\"].document[\"menu9\"]" : "document.all[\"menu9\"].style";
+  menu10 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"].document[\"menu3\"].document[\"menu4\"].document[\"menu5\"].document[\"menu6\"].document[\"menu7\"].document[\"menu8\"].document[\"menu9\"].document[\"menu10\"]" : "document.all[\"menu10\"].style";
+  menu11 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"].document[\"menu3\"].document[\"menu4\"].document[\"menu5\"].document[\"menu6\"].document[\"menu7\"].document[\"menu8\"].document[\"menu9\"].document[\"menu10\"].document[\"menu11\"]" : "document.all[\"menu11\"].style";
+  menu12 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"].document[\"menu3\"].document[\"menu4\"].document[\"menu5\"].document[\"menu6\"].document[\"menu7\"].document[\"menu8\"].document[\"menu9\"].document[\"menu10\"].document[\"menu11\"].document[\"menu12\"]" : "document.all[\"menu12\"].style";
+  menu13 = (NS4) ? "document[\"menu0\"].document[\"menu1\"].document[\"menu2\"].document[\"menu3\"].document[\"menu4\"].document[\"menu5\"].document[\"menu6\"].document[\"menu7\"].document[\"menu8\"].document[\"menu9\"].document[\"menu10\"].document[\"menu11\"].document[\"menu12\"].document[\"menu13\"]" : "document.all[\"menu13\"].style";
+
+  menu1Direction = -1;
+  menu1Bottom = 138;
+  menu1Top = 15;
+  menu1Moving = 0;
+
+  menu2Direction = -1;
+  menu2Bottom = 240;
+  menu2Top = 15;
+  menu2Moving = 0;
+
+  menu3Direction = -1;
+  menu3Bottom = 225;
+  menu3Top = 15;
+  menu3Moving = 0;
+
+  menu4Direction = -1;
+  menu4Bottom = 155;
+  menu4Top = 15;
+  menu4Moving = 0;
+
+  menu5Direction = -1;
+  menu5Bottom = 295;
+  menu5Top = 15;
+  menu5Moving = 0;
+
+  menu6Direction = -1;
+  menu6Bottom = 225;
+  menu6Top = 15;
+  menu6Moving = 0;
+
+  menu7Direction = -1;
+  menu7Bottom = 225;
+  menu7Top = 15;
+  menu7Moving = 0;
+
+  menu8Direction = -1;
+  menu8Bottom = 225;
+  menu8Top = 15;
+  menu8Moving = 0;
+
+  menu9Direction = -1;
+  menu9Bottom = 125;
+  menu9Top = 15;
+  menu9Moving = 0;
+
+  menu10Direction = -1;
+  menu10Bottom = 110; /* bottom margin */
+  menu10Top = 15; /* top margin */
+  menu10Moving = 0;
+
+  menu11Direction = -1;
+  menu11Bottom = 60;
+  menu11Top = 15;
+  menu11Moving = 0;
+
+  menu12Direction = -1;
+  menu12Bottom = 30;
+  menu12Top = 15;
+  menu12Moving = 0;
+
+  menu13Direction = -1;
+  menu13Bottom = 30;
+  menu13Top = 15;
+  menu13Moving = 0;
+
+  lastMoved ="";
+
+  if (!isGo)
+  {
+    if (NS3)
+    {
+      self.location.replace("characters.html");
+    }
+    else if (NS2)
+    {
+      self.location.assign("characters.html");
+    }
+    else {
+      self.location.href = "characters.html";
+    }
+  }
+
+  if (NS4 || (IE4 && !isMac))
+  {
+    initialized = 0;
+
+    defaultStyle = "<STYLE TYPE='text/css'>"
+      + ".obj {"
+      + "position:absolute;"
+      + "background-color:#444444;"
+      + "layer-background-color:#444444;"
+      + "visibility:hidden;"
+      + "width:10;"
+      + "height:10;"
+      + "}"
+      + "</STYLE>";
+
+    document.write(defaultStyle);
+    newWin=0;
+    bgLayerMoved = 0;
+    nameLayerMoved = 0;
+    logoLayerMoved = 0;
+    highLayerMoved = 0;
+  }
+
+function setupLayer(layObj, layTop, layLeft, layWidth,
+                    layHeight, layIndex, invisible)
+{
+  if (initialized)
+  {
+    layerObj = eval(layObj);
+
+    if (NS4)
+    {
+      layerObj.document.width = layWidth;
+      layerObj.document.height = layHeight;
+      layerObj.clip.right = layWidth;
+      layerObj.clip.bottom = layHeight;
+    }
+    else
+    {
+      layerObj.width = layWidth;
+      layerObj.height = layHeight;
+      layerObj.clip = "rect(0 "+layWidth+" "+layHeight+" 0)";
+    }
+    layerObj.top = layTop;
+    layerObj.left = layLeft;
+    layerObj.zIndex = layIndex;
+    if (!invisible)
+    {
+      layerObj.visibility = "visible";
+    }
+  }
+}
+
+function showLayer(layName)
+{
+  if (initialized)
+  {
+    layerObj = eval(doc + '["' + layName + '"]' + sty);
+    if (layerObj)
+    {
+      layerObj.visibility = "visible";
+    }
+  }
+}
+
+/* moves a layer from it's current position to a final position,
+   all the while decelerating */
+function decelMove (layObj, decel)
+{
+  if (initialized)
+  {
+    eval(layObj+"Moving = 1");
+    finalPos = eval(layObj+"Final");
+    direction = eval(layObj+"Direction");
+    layerObj = eval(eval(layObj));
+
+    currentPos = parseInt(layerObj.top);
+    if ((direction * (finalPos - (direction * decel))) <= (direction * currentPos))
+    { //set to final top if the current one has gone too far
+      layerObj.top = finalPos;
+      eval(layObj+"Moving = 0");
+    }
+    else
+    {
+      currentPos = finalPos - parseInt((finalPos - currentPos)/decel);
+      layerObj.top = currentPos;
+      ab1 = window.setTimeout("decelMove('"+layObj+"',"+decel+");", 10);
+    }
+  }
+}
+
+function moveMenu(layerObj)
+{
+  if(lastMoved)
+  {
+    if(eval(lastMoved+"Moving"))
+    {
+      if(eval(lastMoved+'Direction == 1'))
+      {
+        eval(lastMoved+'Final = '+lastMoved+'Top');
+      }
+      else
+      {
+        eval(lastMoved+'Final = '+lastMoved+'Bottom');
+      }
+      eval(lastMoved+'Direction = '+lastMoved+'Direction * -1');
+    }
+    else if(eval(lastMoved+'Direction == 1'))
+    {
+      eval(lastMoved+'Final = '+lastMoved+'Top');
+      eval(lastMoved+'Direction = -1');
+      decelMove(lastMoved,2.55);
+    }
+  }
+  if(! (eval(layerObj+"Moving")))
+  {
+    lastMoved=layerObj;
+  }
+  if(eval(layerObj+'Direction == 1') && ! (eval(layerObj+"Moving")))
+  {
+    eval(layerObj+'Final = '+layerObj+'Top');
+    eval(layerObj+'Direction = -1');
+    decelMove(layerObj,2.55);
+  }
+  else if(! (eval(layerObj+"Moving")))
+  {
+    eval(layerObj+'Final = '+layerObj+'Bottom');
+    eval(layerObj+'Direction = 1');
+    decelMove(layerObj,2.55);
+  }
+}
+// -->
+</script>
+
+<STYLE TYPE="text/css">
+  A {text-decoration:none;}
+  A:hover {color:#FF9933;}
+  td.ss { font-size: small;}
+  span.abbs { color:yellow;}
+  body { background-color: #444444; color: #ffffff; font-size:small}
+</style>
+</HEAD>
+
+<BODY link="#8fbc8f" vlink="#dfbcdf" alink="yellow" text="#ffffff">
+
+<center>
+<strong>== The Trassgar Saga ==</strong>
+<hr>
+<strong>== <a href="contents.html">Main Menu</a> ==</strong>
+<hr>
+</center>
+
+<DIV ID="menu0" CLASS=obj>
+  <strong>Characters</strong>
+
+<DIV ID="menu1" CLASS=obj>
+  <a href="javascript:moveMenu('menu2')">Amber</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <TR>
+      <TD class="ss">
+        * <A target="main" HREF="stor_text1.html#1">Stor 1</A>
+            (<span class="abbs">AGnScOGaSl</span>)<br>
+        * <A target="main" HREF="amber.html#2">Amber 2</A>
+            (<span class="abbs">GnSlGaBe</span>)<br>
+        * <A target="main" HREF="tilder.html#2">Tilder 2</A>
+            (<span class="abbs">AGn</span>)<br>
+        * <A target="main" HREF="amber.html#4">Amber 4</A>
+            (<span class="abbs">Gn</span>)<br>
+        * <A target="main" HREF="tilder.html#4">Tilder 4</A>
+            (<span class="abbs">AGn</span>)<br>
+        * <A target="main" HREF="amber.html#6">Amber 6</A>
+            (<span class="abbs">GnTBe</span>)<br>
+        * <A target="main" HREF="vortex1.html#1">Vortex 1</A>
+            (<span class="abbs">AGnT</span>)<br>
+        * <A target="main" HREF="vortex1.html#2">Vortex 2</A>
+            (<span class="abbs">ATGnSl</span>)<br>
+        * <A target="main" HREF="vortex2.html#3">Vortex 3</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex2.html#4">Vortex 4</A>
+            (<span class="abbs">ATGn</span>)<br>
+        * <A target="main" HREF="vortex2.html#5">Vortex 5</A>
+            (<span class="abbs">ATGn</span>)<br>
+        * <A target="main" HREF="vortex3.html#6">Vortex 6</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex3.html#7">Vortex 7</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex3.html#8">Vortex 8</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex3.html#9">Vortex 9</A>
+            (<span class="abbs">AT</span>)
+      </td>
+    </tr>
+  </table>
+
+<DIV ID="menu2" CLASS=obj>
+  <a href="javascript:moveMenu('menu3')">Tilder</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <TR>
+      <TD class="ss">
+        * <A target="main" HREF="tilder.html#1">Tilder 1</A><br>
+        * <A target="main" HREF="tilder.html#2">Tilder 2</A>
+            (<span class="abbs">AGn</span>)<br>
+        * <A target="main" HREF="tilder.html#4">Tilder 4</A>
+            (<span class="abbs">AGn</span>)<br>
+        * <A target="main" HREF="amber.html#6">Amber 6</A>
+            (<span class="abbs">GnTBe</span>)<br>
+        * <A target="main" HREF="tilder.html#6">Tilder 6</A>
+            (<span class="abbs">Be</span>)<br>
+        * <A target="main" HREF="vortex1.html#1">Vortex 1</A>
+            (<span class="abbs">AGnT</span>)<br>
+        * <A target="main" HREF="vortex1.html#2">Vortex 2</A>
+            (<span class="abbs">ATGnSl</span>)<br>
+        * <A target="main" HREF="vortex2.html#3">Vortex 3</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex2.html#4">Vortex 4</A>
+            (<span class="abbs">ATGn</span>)<br>
+        * <A target="main" HREF="vortex2.html#5">Vortex 5</A>
+            (<span class="abbs">ATGn</span>)<br>
+        * <A target="main" HREF="vortex3.html#6">Vortex 6</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex3.html#7">Vortex 7</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex3.html#8">Vortex 8</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex3.html#9">Vortex 9</A>
+            (<span class="abbs">AT</span>)
+      </td>
+    </tr>
+  </table>
+
+<DIV ID="menu3" CLASS=obj>
+  <a href="javascript:moveMenu('menu4')">Vortex</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <tr>
+      <td class="ss">
+        * <A target="main" HREF="vortex1.html#1">Vortex 1</A>
+            (<span class="abbs">AGnT</span>)<br>
+        * <A target="main" HREF="vortex1.html#2">Vortex 2</A>
+            (<span class="abbs">ATGnSl</span>)<br>
+        * <A target="main" HREF="vortex2.html#3">Vortex 3</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex2.html#4">Vortex 4</A>
+            (<span class="abbs">ATGn</span>)<br>
+        * <A target="main" HREF="vortex2.html#5">Vortex 5</A>
+            (<span class="abbs">ATGn</span>)<br>
+        * <A target="main" HREF="vortex3.html#6">Vortex 6</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex3.html#7">Vortex 7</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex3.html#8">Vortex 8</A>
+            (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex3.html#9">Vortex 9</A>
+            (<span class="abbs">AT</span>)
+      <td>
+    </tr>
+  </table>
+
+<DIV ID="menu4" CLASS=obj>
+  <a href="javascript:moveMenu('menu5')">Gnash</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <tr>
+      <td class="ss">
+        * <A target="main" HREF="stor_text1.html#1">Stor 1</A>
+          (<span class="abbs">AGnScOGaSl</span>)<br>
+        * <A target="main" HREF="amber.html#2">Amber 2</A>
+          (<span class="abbs">GnSlGaBe</span>)<br>
+        * <A target="main" HREF="tilder.html#2">Tilder 2</A>
+          (<span class="abbs">AGn</span>)<br>
+        * <A target="main" HREF="amber.html#4">Amber 4</A>
+          (<span class="abbs">Gn</span>)<br>
+        * <A target="main" HREF="tilder.html#4">Tilder 4</A>
+          (<span class="abbs">AGn</span>)<br>
+        * <A target="main" HREF="amber.html#6">Amber 6</A>
+          (<span class="abbs">GnTBe</span>)<br>
+        * <A target="main" HREF="tilder.html#6">Tilder 6</A>
+          (<span class="abbs">Be</span>)<br>
+        * <A target="main" HREF="vortex1.html#1">Vortex 1</A>
+          (<span class="abbs">AGnT</span>)<br>
+        * <A target="main" HREF="vortex1.html#2">Vortex 2</A>
+          (<span class="abbs">ATGnSl</span>)<br>
+        * <A target="main" HREF="vortex2.html#3">Vortex 3</A>
+          (<span class="abbs">AT</span>)<br>
+        * <A target="main" HREF="vortex2.html#4">Vortex 4</A>
+          (<span class="abbs">ATGn</span>)<br>
+        * <A target="main" HREF="vortex2.html#5">Vortex 5</A>
+          (<span class="abbs">ATGn</span>)<br>
+        * <A target="main" HREF="vortex3.html#6">Vortex 6</A>
+          (<span class="abbs">AT</span>)<br>
+        * <a target="main" HREF="gnash.html#1">Gnash 1</a><br>
+        * <a target="main" href="gnash.html#2-1">Gnash 2-1</a>
+          (<span class="abbs">OScSt</span>)<br>
+        * <a target="main" href="gnash.html#2-2">Gnash 2-2</a>
+          (<span class="abbs">OScSt</span>)<br>
+        * <a target="main" href="gnash.html#2-3">Gnash 2-3</a>
+          (<span class="abbs">OScSt</span>)<br>
+        * <a target="main" href="gnash.html#2-4">Gnash 2-4</a>
+          (<span class="abbs">OScSt</span>)<br>
+      </td>
+    </tr>
+  </table>
+
+<DIV ID="menu5" CLASS=obj>
+  <a href="javascript:moveMenu('menu6')">Olen</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <TR>
+      <td class="ss">
+        * <A target="main" HREF="stor_text1.html#1">Stor 1</A>
+            (<span class="abbs">AGnScOGaSl</span>)<br>
+        * <A target="main" HREF="olen_text1.html#2">Olen 2</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#3">Olen 3</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#4">Olen 4</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#5">Olen 5</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#6">Olen 6</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#7">Olen 7</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#8">Olen 8</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#9">Olen 9</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#10">Olen 10</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text3.html#11">Olen 11</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <a target="main" href="stor.html#2">Stor 2</a>
+            (<span class="abbs">OSc</span>)<br>
+        * <a target="main" href="gnash.html#2-1">Gnash 2-1</a>
+            (<span class="abbs">OScSt</span>)<br>
+        * <a target="main" href="gnash.html#2-2">Gnash 2-2</a>
+          (<span class="abbs">OScSt</span>)
+      </td>
+    </TR>               
+  </TABLE>
+
+
+<DIV ID="menu6" CLASS=obj>
+  <a href="javascript:moveMenu('menu7')">Scurge</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <TR>
+      <td class="ss">
+        * <A target="main" HREF="stor_text1.html#1">Stor 1</A>
+            (<span class="abbs">AGnScOGaSl</span>)<br>
+        * <A target="main" HREF="olen_text1.html#2">Olen 2</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#3">Olen 3</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#4">Olen 4</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#5">Olen 5</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#6">Olen 6</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#7">Olen 7</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#8">Olen 8</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#9">Olen 9</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#10">Olen 10</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text3.html#11">Olen 11</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <a target="main" href="stor.html#2">Stor 2</a>
+            (<span class="abbs">OSc</span>)<br>
+        * <a target="main" href="gnash.html#2-1">Gnash 2-1</a>
+            (<span class="abbs">OScSt</span>)<br>
+        * <a target="main" href="gnash.html#2-2">Gnash 2-2</a>
+          (<span class="abbs">OScSt</span>)
+      </TD>
+    </TR>               
+  </TABLE>
+
+
+<DIV ID="menu7" CLASS=obj>
+  <a href="javascript:moveMenu('menu8')">Stor</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <TR>
+      <td class="ss">
+        * <A target="main" HREF="stor_text1.html#1">Stor 1</A>
+            (<span class="abbs">AGnScOGaSl</span>)<br>
+        * <A target="main" HREF="olen_text1.html#2">Olen 2</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#3">Olen 3</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#4">Olen 4</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#5">Olen 5</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text1.html#6">Olen 6</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#7">Olen 7</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#8">Olen 8</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#9">Olen 9</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text2.html#10">Olen 10</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <A target="main" HREF="olen_text3.html#11">Olen 11</A>
+            (<span class="abbs">ScSt</span>)<br>
+        * <a target="main" href="stor.html#2">Stor 2</a>
+            (<span class="abbs">OSc</span>)<br>
+        * <a target="main" href="gnash.html#2-1">Gnash 2-1</a>
+            (<span class="abbs">OScSt</span>)<br>
+        * <a target="main" href="gnash.html#2-2">Gnash 2-2</a>
+          (<span class="abbs">OScSt</span>)
+      </TD>
+    </TR>               
+  </TABLE>
+
+
+<DIV ID="menu8" CLASS=obj>
+  <a href="javascript:moveMenu('menu9')">T'Asha</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <TR>
+      <td class="ss">
+        * <a target="main" HREF="tobin.html#1">T'Asha 1</a><br>
+        * <a target="main" HREF="tobin.html#2">T'Asha 2</a><br>
+        * <a target="main" HREF="tobin.html#3">T'Asha 3</a><br>
+        * <a target="main" href="tobin.html#4">T'Asha 4</a><br>
+        * <a target="main" href="tobin.html#5">T'Asha 5</a><br>
+        * <a target="main" href="tobin.html#6">T'Asha 6</a><br>
+	* <a target="main" href="tobin.html#7">T'Asha 7</a><br>
+      </TD>
+    </TR>               
+  </TABLE>
+
+
+<DIV ID="menu9" CLASS=obj>
+  <a href="javascript:moveMenu('menu10')">Jerith</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <TR>
+      <td class="ss">
+        * <A target="main" HREF="jerith.html#1">Jerith 1</A><br>
+        * <A target="main" HREF="jerith.html#2">Jerith 2</A><br>
+        * <A target="main" HREF="jerith.html#3">Jerith 3</A>
+            (<span class="abbs">Sy</span>)<br>
+        * <A target="main" HREF="jerith.html#4">Jerith 4</A>
+            (<span class="abbs">Sy</span>)<br>
+        * <A target="main" HREF="jerith.html#5">Jerith 5</A>
+            (<span class="abbs">Sy</span>)<br>
+        * <a target="main" href="jerith.html#6">Jerith 6</a>
+            (<span class="abbs">Sy</span>)
+      </TD>
+    </TR>               
+  </TABLE>
+
+
+<DIV ID="menu10" CLASS=obj>
+  <a href="javascript:moveMenu('menu11')">Stoybin</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <TR>
+      <td class="ss">
+        * <A target="main" HREF="jerith.html#4">Jerith 4</A>
+            (<span class="abbs">Sy</span>)<br>
+        * <A target="main" HREF="jerith.html#5">Jerith 5</A>
+            (<span class="abbs">Sy</span>)<br>
+        * <a target="main" href="jerith.html#6">Jerith 6</a>
+            (<span class="abbs">Sy</span>)
+      <td>               
+    </TR>               
+  </TABLE>
+
+
+<DIV ID="menu11" CLASS=obj>
+  <a href="javascript:moveMenu('menu12')">Broadnax</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <TR>
+      <td class="ss">
+      [No segments yet]
+      </td>
+    </TR>               
+  </TABLE>
+
+
+<DIV ID="menu12" CLASS=obj>
+  <a href="javascript:moveMenu('menu13')">Dalim</a>
+  <TABLE cellpadding=0 cellspacing=0 border=0 width=135>
+    <TR>               
+      <td class="ss">
+      [No segments yet]
+      </td>
+    </TR>               
+  </TABLE>
+
+<DIV ID="menu13" CLASS=obj>
+</DIV> <!-- close menu 13 obj -->
+</DIV> <!-- close menu 12 obj -->
+</DIV> <!-- close menu 11 obj -->
+</DIV> <!-- close menu 10 obj -->
+</DIV> <!-- close menu 9 obj -->
+</DIV> <!-- close menu 8 obj -->
+</DIV> <!-- close menu 7 obj -->
+</DIV> <!-- close menu 6 obj -->
+</DIV> <!-- close menu 5 obj -->
+</DIV> <!-- close menu 4 obj -->
+</DIV> <!-- close menu 3 obj -->
+</DIV> <!-- close menu 2 obj -->
+</DIV> <!-- close menu 1 obj -->
+</DIV> <!-- close menu 0 obj -->
+
+</BODY>
+</HTML>
+<script language="JavaScript">
+<!--
+  if (NS4 || (IE4 && !isMac))
+  {
+    initialized=1;
+
+    setupLayer(menu0,  75, 0, 155, 500,  1);
+    setupLayer(menu1,  15, 0, 155, 500,  2);
+    setupLayer(menu2,  15, 0, 155, 500,  3);
+    setupLayer(menu3,  15, 0, 155, 500,  4);
+    setupLayer(menu4,  15, 0, 155, 500,  5);
+    setupLayer(menu5,  15, 0, 155, 500,  6);
+    setupLayer(menu6,  15, 0, 155, 500,  7);
+    setupLayer(menu7,  15, 0, 155, 500,  8);
+    setupLayer(menu8,  15, 0, 155, 500,  9);
+    setupLayer(menu9,  15, 0, 155, 500, 10);
+    setupLayer(menu10, 15, 0, 155, 500, 11);
+    setupLayer(menu11, 15, 0, 155, 500, 12);
+    setupLayer(menu12, 15, 0, 155, 500, 13);
+    setupLayer(menu13, 15, 0, 155, 500, 14);
+  }
+// -->
+</script>

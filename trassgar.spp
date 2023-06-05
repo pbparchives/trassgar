@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="XML Files" ExtStr="xml;cml;math;mtx;rdf;smil;svg;wml"/>
+	<Folder FolderName="XSL Files" ExtStr="xsl;xslt"/>
+	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp">
+		<File FilePath=".\addbook.html" HomeFolder="Yes"/>
+		<File FilePath=".\amber.html" HomeFolder="Yes"/>
+		<File FilePath=".\amber_history.html" HomeFolder="Yes"/>
+		<File FilePath=".\amber_lineage.html" HomeFolder="Yes"/>
+		<File FilePath=".\characters.html" HomeFolder="Yes"/>
+		<File FilePath=".\cities.html" HomeFolder="Yes"/>
+		<File FilePath=".\contents.html" HomeFolder="Yes"/>
+		<File FilePath=".\contents_old.html" HomeFolder="Yes"/>
+		<File FilePath=".\contents_players.html" HomeFolder="Yes"/>
+		<File FilePath=".\darrin.html" HomeFolder="Yes"/>
+		<File FilePath=".\furterville.html" HomeFolder="Yes"/>
+		<File FilePath=".\geobook.html" HomeFolder="Yes"/>
+		<File FilePath=".\geobook1.html" HomeFolder="Yes"/>
+		<File FilePath=".\ghoulquest.html" HomeFolder="Yes"/>
+		<File FilePath=".\gnash.html" HomeFolder="Yes"/>
+		<File FilePath=".\icecity_prophecy.html" HomeFolder="Yes"/>
+		<File FilePath=".\index.html" HomeFolder="Yes"/>
+		<File FilePath=".\jerith.html" HomeFolder="Yes"/>
+		<File FilePath=".\main.html" HomeFolder="Yes"/>
+		<File FilePath=".\new.html" HomeFolder="Yes"/>
+		<File FilePath=".\olen.html" HomeFolder="Yes"/>
+		<File FilePath=".\olen_background.html" HomeFolder="Yes"/>
+		<File FilePath=".\olen_descrip.html" HomeFolder="Yes"/>
+		<File FilePath=".\olen_scores.html" HomeFolder="Yes"/>
+		<File FilePath=".\olen_spells.html" HomeFolder="Yes"/>
+		<File FilePath=".\olen_text1.html" HomeFolder="Yes"/>
+		<File FilePath=".\olen_text2.html" HomeFolder="Yes"/>
+		<File FilePath=".\olen_text3.html" HomeFolder="Yes"/>
+		<File FilePath=".\original.html" HomeFolder="Yes"/>
+		<File FilePath=".\other_pcs.html" HomeFolder="Yes"/>
+		<File FilePath=".\players.html" HomeFolder="Yes"/>
+		<File FilePath=".\rules.html" HomeFolder="Yes"/>
+		<File FilePath=".\scurge.html" HomeFolder="Yes"/>
+		<File FilePath=".\scurge_char.html" HomeFolder="Yes"/>
+		<File FilePath=".\scurge_text1.html" HomeFolder="Yes"/>
+		<File FilePath=".\slahm.html" HomeFolder="Yes"/>
+		<File FilePath=".\stor.html" HomeFolder="Yes"/>
+		<File FilePath=".\stor_equip.html" HomeFolder="Yes"/>
+		<File FilePath=".\stor_scores.html" HomeFolder="Yes"/>
+		<File FilePath=".\stor_text1.html" HomeFolder="Yes"/>
+		<File FilePath=".\tilder.html" HomeFolder="Yes"/>
+		<File FilePath=".\tilder_stats.html" HomeFolder="Yes"/>
+		<File FilePath=".\tobin.html" HomeFolder="Yes"/>
+		<File FilePath=".\toc.html" HomeFolder="Yes"/>
+		<File FilePath=".\trassgar_faiths.html" HomeFolder="Yes"/>
+		<File FilePath=".\trassgar_houses.html" HomeFolder="Yes"/>
+		<File FilePath=".\updates.html" HomeFolder="Yes"/>
+		<File FilePath=".\vortex1.html" HomeFolder="Yes"/>
+		<File FilePath=".\vortex2.html" HomeFolder="Yes"/>
+		<File FilePath=".\vortex3.html" HomeFolder="Yes"/>
+		<File FilePath=".\vortex4.html" HomeFolder="Yes"/>
+		<File FilePath=".\vortex5.html" HomeFolder="Yes"/>
+		<File FilePath=".\world.html" HomeFolder="Yes"/>
+		<File FilePath=".\xanter.html" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="DTD/Schemas" ExtStr="dtd;dcd;xdr;biz;xsd"/>
+	<Folder FolderName="Entities" ExtStr="ent"/>
+</Project>

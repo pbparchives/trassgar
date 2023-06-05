@@ -1,0 +1,18 @@
+span.courier { font-family: courier; font-size: smaller }
+span.dm { color: lightgreen; }
+span.inac { color: #ffff00 }
+span.larger { font-size: larger }
+span.npc { color: #00ffff }
+span.partof { font-size: x-small }
+span.orange { color: orange }
+span.red { color: red }
+span.smaller { font-size: smaller }
+span.trf { font-family: sans-serif; }
+span.x-large { font-size: x-large }
+td.blackcolhead { font-color: white; background: black; text-align: center }
+BODY { background: #444444; color: #FFFFFF}
+A:link { color: #8fbc8f }
+A:visited { color: #dfbcdf }
+A:active { color: yellow }
+table.index { margin-left: auto; margin-right: auto }
+td.smaller { font-size: smaller }
